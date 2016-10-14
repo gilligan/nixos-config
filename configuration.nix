@@ -11,7 +11,27 @@ let
 
   };
 
-  setxkbmapPackages = with pkgs.xorg; { inherit xinput xset setxkbmap xmodmap; };
+  setxkbmapPackages = with pkgs.xorg; {
+    inherit xinput xset setxkbmap xmodmap; };
+
+  hsPackages = with pkgs.haskellPackages; [
+    alex
+    cabal2nix
+    cabal-install
+    ghc
+    ghcid
+    ghc-mod
+    happy
+    hlint
+    stack
+  ];
+
+  npmPackages = with (import ./node-packages { inherit pkgs; }); [
+    jsonlint
+    replem
+    tern
+    elm-oracle
+  ];
 
 in {
 
@@ -42,6 +62,7 @@ in {
   networking.hostName = "monoid"; # Define your hostname.
   networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
+  hardware.facetimehd.enable = true;
 
   powerManagement.enable = true;
 
@@ -60,6 +81,7 @@ in {
       setxkbmapPackages //
       {})) ++
     [
+    arandr
     nix-repl
     gitAndTools.hub
     gitAndTools.gitFull
@@ -69,7 +91,7 @@ in {
     silver-searcher
     tmux
     groovy
-    python
+    gnupg
 
     acpi
     lm_sensors
@@ -77,13 +99,16 @@ in {
     chromium
     dmenu
     dunst
-    git
+    evince
     gtk-engine-murrine
     gtk_engines
     hexchat
     htop
     jq
     lxappearance
+    mbpfan
+    nodejs-6_x
+    ncdu
 
     (neovim.override {
       vimAlias = true;
@@ -101,11 +126,15 @@ in {
 
     networkmanagerapplet
     networkmanager_vpnc
+    nixops
     nox
     openfortivpn
     openvpn
+    oh-my-zsh
 
+    fzf
     python
+    pass
     rofi
     silver-searcher
     terminator
@@ -113,6 +142,7 @@ in {
     udisks_glue
     unclutter
     unzip
+    vlc
     wget
     xcape
     xclip
@@ -121,7 +151,8 @@ in {
     xlibs.xev
     xlibs.xmodmap
     xlibs.xset
-  ];
+  ] ++ hsPackages
+    ++ npmPackages;
 
   programs.zsh.enable = true;
 
@@ -133,6 +164,16 @@ in {
       enablePepperFlash = true;
       enablePepperPDF = true;
     };
+  };
+
+  nix = {
+    gc = {
+      automatic = true;
+    };
+    extraOptions = ''
+      auto-optimise-store = true
+    '';
+
   };
 
   # Configure fonts
@@ -225,6 +266,8 @@ in {
 
   virtualisation.docker.enable = true;
   users.extraGroups.docker.members = [ "gilligan" ];
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "gilligan" ];
 
   # Enable the X11 windowing system.
   services.xserver = {
@@ -233,6 +276,11 @@ in {
     displayManager = {
       slim.enable = true;
       slim.defaultUser = "gilligan";
+      sessionCommands = ''
+        gpg-connect-agent /bye
+        GPG_TTY=$(tty)
+        export GPG_TTY
+      '';
     };
 
     desktopManager.xterm.enable = false;

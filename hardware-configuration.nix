@@ -8,10 +8,11 @@
     [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
     ];
 
-  boot.kernelPackages = pkgs.linuxPackages_4_6;
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.kernelModules = [ "kvm-intel" "wl" ];
-  boot.extraModulePackages = [ config.boot.kernelPackages.broadcom_sta ];
+  boot.extraModulePackages = [ 
+    config.boot.kernelPackages.broadcom_sta 
+  ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/3e045b4c-708f-45b2-8c11-48267576e60e";

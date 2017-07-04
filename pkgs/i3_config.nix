@@ -1,5 +1,5 @@
 { i3, i3status, xrandr, feh, py3status, lib, rofi-menugen, writeScript
-, terminator, ipython, gnome_keyring, redshift, alot, networkmanagerapplet
+, terminator, gnome_keyring, redshift, alot, networkmanagerapplet
 , base16, rofi, rofi-pass, i3lock-fancy, xbacklight
 , xcape
 }:
@@ -69,8 +69,8 @@ bindsym $mod+Return exec ${terminator}/bin/terminator
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-#bindsym $mod+r exec rofi -show run -opacity 75 -hide-scrollbar -lines 4 -fuzzy
-bindsym $mod+r exec --no-startup-id ${i3}/bin/i3-dmenu-desktop --dmenu='${rofi}/bin/rofi -fuzzy -dmenu -p "run:"'
+bindsym $mod+r exec rofi -show run -opacity 75 -hide-scrollbar -lines 4 -fuzzy
+#bindsym $mod+r exec --no-startup-id ${i3}/bin/i3-dmenu-desktop --dmenu='${rofi}/bin/rofi -fuzzy -dmenu -p "run:"'
 bindsym $mod+space exec --no-startup-id ${rofi}/bin/rofi -fuzzy -show window
 bindsym $mod+Shift+p exec --no-startup-id ${rofi-pass}/bin/rofi-pass
 bindsym $mod+Shift+o exec --no-startup-id ${powerManagement}
@@ -82,6 +82,9 @@ bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
+
+bindsym $mod+m move scratchpad
+bindsym $mod+o scratchpad show
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -188,9 +191,6 @@ mode "resize" {
 bindsym $mod+b mode "resize"
 
 
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
 bindcode 232 exec xbacklight -dec 10
 bindcode 233 exec xbacklight -inc 10
 
@@ -199,13 +199,29 @@ bindcode 233 exec xbacklight -inc 10
 # finds out, if available)
 bar {
         status_command i3status
+  colors {
+    separator #928374
+    background #282828
+    statusline #ebdbb2
+    focused_workspace #689d6a #689d6a #282828
+    active_workspace #1d2021 #1d2021 #928374
+    inactive_workspace #32302f #32302f #928374
+    urgent_workspace #cc241d #cc241d #ebdbb2
+  }
+
 }
 
-for_window [class="^Spotify$"] floating enable
-for_window [class="^Spotify Premium$"] floating enable
-for_window [class="Firefox"] floating enable
+for_window [class="^Chromium-browser$"] border none
+for_window [class="^Slack$"] border none
 
 
+client.focused #689d6a #689d6a #282828 #282828
+client.focused_inactive #1d2021 #1d2021 #928374 #282828
+client.unfocused #32302f #32302f #928374 #282828
+client.urgent #cc241d #cc241d #ebdbb2 #282828
+
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id xfce4-voumed
 exec --no-startup-id ${networkmanagerapplet}/bin/nm-applet
 exec --no-startup-id ${xcape}/bin/xcape -e 'Control_L=Escape;Shift_R=parenright;Shift_L=parenleft'
 exec --no-startup-id ${feh}/bin/feh --bg-scale $HOME/.nixos-config/wallpaper.jpg

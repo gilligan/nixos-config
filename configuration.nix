@@ -201,12 +201,10 @@ in {
   };
 
   nix = {
+    autoOptimiseStore = true;
     gc = {
       automatic = true;
     };
-    extraOptions = ''
-      auto-optimise-store = true
-    '';
     trustedBinaryCaches = [ "http://ci.hcweb.aws.hc.lan:8081" ];
     requireSignedBinaryCaches = false;
   };

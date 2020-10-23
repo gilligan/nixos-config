@@ -44,7 +44,6 @@ in
 
   programs = {
     command-not-found.enable = true;
-    neovim.vimAlias = true;
     tmux = {
       enable = true;
       terminal = "screen-256color";

@@ -4,4 +4,4 @@ build:
 	NIXOS_CONFIG=$$PWD/configuration.nix nixos-rebuild build
 
 switch:
-	NIXOS_CONFIG=$$PWD/configuration.nix nixos-rebuild switch
+	sudo NIXOS_CONFIG=$$PWD/configuration.nix nixos-rebuild switch

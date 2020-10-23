@@ -34,5 +34,17 @@
         "type": "tarball",
         "url": "https://github.com/cachix/pre-commit-hooks.nix/archive/519988762d02e8ed7204723349f15cc31cb8a38e.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "sorri": {
+        "branch": "master",
+        "description": "Just Add Water direnv support for the nix-shell",
+        "homepage": null,
+        "owner": "nmattia",
+        "repo": "sorri",
+        "rev": "20717a94e1cc93b9825681d626c7d4ea2f27b4eb",
+        "sha256": "0981m3wkrr8sdx1s06dcpplbzll6lcbhm47ffkvb3m35ip40y675",
+        "type": "tarball",
+        "url": "https://github.com/nmattia/sorri/archive/20717a94e1cc93b9825681d626c7d4ea2f27b4eb.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

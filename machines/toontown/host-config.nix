@@ -44,6 +44,7 @@
       ripgrep
       shellcheck
       slack
+      sorri
       wget
     ];
   };

@@ -31,6 +31,7 @@
 
   environment = {
     systemPackages = with pkgs; [
+      ag
       chromium
       direnv
       entr

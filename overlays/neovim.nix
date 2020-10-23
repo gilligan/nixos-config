@@ -2,7 +2,7 @@ self: super:
 {
   plug-vim = self.writeTextFile {
     name = "plug.vim";
-    text = self.lib.fileContents ./assets/plug.vim;
+    text = self.lib.fileContents ../assets/plug.vim;
     destination = "/plug.vim";
   };
 
@@ -11,7 +11,7 @@ self: super:
       customRC = ''
         source ${self.plug-vim}/plug.vim
 
-        ${builtins.readFile ./assets/vimrc}
+        ${builtins.readFile ../assets/vimrc}
 
         if filereadable(expand('~/.config/nvim/local.vim'))
         source ~/.config/nvim/local.vim

@@ -13,7 +13,10 @@
     ];
   };
 
-  networking.networkmanager.enable = true;
+  networking = {
+    networkmanager.enable = true;
+    hostName = "toontown";
+  };
 
   sound.extraConfig = ''
     pcm.!default {
@@ -36,10 +39,11 @@
       gitAndTools.hub
       gitAndTools.tig
       jq
-      slack
-      shellcheck
-      wget
+      neovim
       ripgrep
+      shellcheck
+      slack
+      wget
     ];
   };
 

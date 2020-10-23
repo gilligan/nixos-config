@@ -168,6 +168,7 @@ in
         export TERM=xterm-256color
         export NIXPKGS_ALLOW_UNFREE=1
         export FZF_DEFAULT_COMMAND='ag -g ""'
+        eval "$(direnv hook zsh)"
       '';
     };
   };

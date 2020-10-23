@@ -1,7 +1,10 @@
 let
   sources = import ./sources.nix;
+  config = {
+    allowUnfree = true;
+  };
   overlays = [
     (self: super: { nix-pre-commit-hooks = import sources."pre-commit-hooks.nix"; })
   ];
 in
-import sources.nixpkgs { inherit overlays; }
+import sources.nixpkgs { inherit overlays config; }

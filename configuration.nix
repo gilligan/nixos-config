@@ -161,6 +161,7 @@ in
       shellAliases = {
         pbcopy = "${pkgs.xclip}/bin/xclip -selection clipboard";
         pbpaste = "${pkgs.xclip}/bin/xclip -selection clipboard -o";
+        vim = "nvim";
       };
       interactiveShellInit = ''
         export BROWSER=chromium

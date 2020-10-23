@@ -44,6 +44,7 @@ in
 
   programs = {
     command-not-found.enable = true;
+    neovim.vimAlias = true;
     tmux = {
       enable = true;
       terminal = "screen-256color";
@@ -126,7 +127,6 @@ in
         bind -n C-j if-shell "$is_vim" "send-keys C-j" "select-pane -D"
         bind -n C-k if-shell "$is_vim" "send-keys C-k" "select-pane -U"
         bind -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R"
-        bind -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 
 
         # default statusbar colors

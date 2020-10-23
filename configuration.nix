@@ -22,6 +22,8 @@ in
     };
     extraOptions = ''
       auto-optimise-store = true
+      keep-outputs = true
+      keep-derivations = true
     '';
   };
 

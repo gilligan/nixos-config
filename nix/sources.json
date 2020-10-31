@@ -11,6 +11,18 @@
         "url": "https://github.com/nmattia/niv/archive/9d35b9e4837ab88517210b1701127612c260eccf.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "nix-direnv": {
+        "branch": "master",
+        "description": "A fast, persistent use_nix implementation for direnv [maintainer=@Mic92] ",
+        "homepage": "",
+        "owner": "nix-community",
+        "repo": "nix-direnv",
+        "rev": "b54e2f2c4b21e32fbdab048b37e6e1492f6a5fda",
+        "sha256": "09shksmlkg1bd15jlf64gzxixlrkw8r8k14pcpwkb5m1s5f5vy21",
+        "type": "tarball",
+        "url": "https://github.com/nix-community/nix-direnv/archive/b54e2f2c4b21e32fbdab048b37e6e1492f6a5fda.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "nixpkgs": {
         "branch": "nixos-20.03",
         "description": "DEPRECATED! This is an obsolete, read-only mirror of the NixOS/nixpkgs repository.",

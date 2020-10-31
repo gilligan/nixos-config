@@ -30,6 +30,9 @@
   '';
 
   environment = {
+    pathsToLink = [
+      "/share/nix-direnv"
+    ];
     systemPackages = with pkgs; [
       ag
       chromium
@@ -41,6 +44,7 @@
       gitAndTools.tig
       jq
       neovim
+      nix-direnv
       ripgrep
       shellcheck
       slack

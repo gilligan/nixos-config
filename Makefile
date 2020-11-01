@@ -1,6 +1,6 @@
 all: build
 
-build:
+build: ./host-config.nix ./host-hardware.nix
 	NIXOS_CONFIG=$$PWD/configuration.nix nixos-rebuild build
 
 switch:

@@ -5,3 +5,7 @@ build: ./host-config.nix ./host-hardware.nix
 
 switch:
 	NIXOS_CONFIG=$$PWD/configuration.nix nixos-rebuild switch
+
+update-nixpkgs:
+	niv update nixpkgs
+	direnv reload

@@ -54,6 +54,11 @@ Plug 'parsonsmatt/intero-neovim', { 'for': 'haskell' }
 Plug 'neomake/neomake', { 'for': ['haskell'] }
 
 "
+" agda
+"
+Plug 'derekelkins/agda-vim', { 'for': 'agda' }
+
+"
 " LSP magic
 "
 Plug 'prabirshrestha/async.vim'

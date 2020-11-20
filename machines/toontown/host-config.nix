@@ -93,6 +93,11 @@
       autoRepeatDelay = 250;
       autoRepeatInterval = 50;
     };
+    hydra = {
+      enable = true;
+      hydraURL = "toontown";
+      notificationSender = "hydra@toontown";
+    };
 
   };
 

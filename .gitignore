@@ -1,4 +1,4 @@
 .direnv
-result
+result*
 host-config.nix
 host-hardware.nix

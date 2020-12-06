@@ -12,7 +12,6 @@ let
 in
 pkgs.mkShell {
   buildInputs = with pkgs; [ git nixpkgs-fmt niv gnumake ];
-  NIXOS_CONFIG = ./configuration.nix;
   NIX_PATH = "nixpkgs=${pkgs.path}";
   inherit (pre-commit-hooks) shellHook;
 }

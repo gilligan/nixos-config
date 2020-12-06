@@ -18,6 +18,9 @@ in
     buildCores = 16;
     trustedUsers = [ "root" "gilligan" ];
     nixPath = [ "nixpkgs=${nixpkgs.path}" ];
+    extraOptions = ''
+      allowed-uris = https://github.com
+    '';
   };
 
   nixpkgs = {

@@ -37,7 +37,7 @@ in
   networking = {
     hostName = "toontown";
     networkmanager.enable = true;
-    firewall.enable = false;
+    firewall.enable = true;
   };
 
   hardware = {
@@ -45,6 +45,10 @@ in
   };
 
   services = {
+
+    fail2ban = {
+      enable = true;
+    };
 
     hydra = {
       enable = true;

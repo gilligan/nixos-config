@@ -7,6 +7,7 @@ self: super:
   };
 
   neovim = super.neovim.override {
+    withNodeJs = true;
     configure = {
       customRC = ''
         source ${self.plug-vim}/plug.vim

@@ -18,10 +18,8 @@ Plug 'tpope/vim-rhubarb'
 "
 " completions & snippets
 "
-Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 
 "
 " web stuff
@@ -61,14 +59,7 @@ Plug 'derekelkins/agda-vim', { 'for': 'agda' }
 "
 " LSP magic
 "
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'lighttiger2505/deoplete-vim-lsp'
-
-"Plug 'autozimu/LanguageClient-neovim', {
-    "\ 'branch': 'next',
-    "\ 'do': 'bash install.sh',
-    "\ }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "
 " git / scm
@@ -607,30 +598,22 @@ endfunction
 
 let g:fzf_layout = { 'window': 'call FloatingFZF()' }
 
+"
+" neoterm settings
+"
+let g:neoterm_default_mod = 'botright'
+let g:neoterm_autojump = 1
+let g:neoterm_autoinsert = 1
 
 "
-" vim-lsp settings
+" neoformat settings
 "
-au User lsp_setup call lsp#register_server({
-    \ 'name': 'pyls',
-    \ 'cmd': {server_info->['pyls']},
-    \ 'whitelist': ['python'],
-    \ })
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
 
-au User lsp_setup call lsp#register_server({
-    \ 'name': 'ghcide',
-    \ 'cmd': {server_info->['ghcide', '--lsp']},
-    \ 'whitelist': ['haskell'],
-    \ })
-
-au User lsp_setup call lsp#register_server({
-    \ 'name': 'rls',
-    \ 'cmd': {server_info->['rls']},
-    \ 'whitelist': ['rust'],
-    \ })
-
-au User lsp_setup call lsp#register_server({
-      \ 'name': 'bash-language-server',
-      \ 'cmd': {server_info->[&shell, &shellcmdflag, 'bash-language-server start']},
-      \ 'whitelist': ['sh'],
-      \ })
+"
+" directory rooter settings
+"
+let g:rooter_patterns = ['Cargo.toml', 'dune-project', 'project.clj', 'build.gradle.kts', 'build.sbt', 'spago.dhall', 'hie.yaml',  '.git/']

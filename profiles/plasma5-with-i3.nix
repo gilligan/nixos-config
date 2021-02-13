@@ -39,6 +39,7 @@
       slack
       signal-desktop
       spotify
+      xsel
       zoom-us
     ];
     variables = {

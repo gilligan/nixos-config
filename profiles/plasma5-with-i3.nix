@@ -18,6 +18,7 @@
           GPG_TTY=$(tty)
           export GPG_TTY
           export XCURSOR_PATH=${pkgs.gnome3.adwaita-icon-theme}/share/icons
+          ${pkgs.xlibs.xsetroot}/bin/xsetroot -cursor_name ${pkgs.gnome3.adwaita-icon-theme}/share/icons/Adwaita/cursors/left_ptr 64
         '';
       };
 
@@ -44,7 +45,8 @@
     ];
     variables = {
       KDEWM = "/run/current-system/sw/bin/i3";
-      XCURSOR_THEME = "adwaita";
+      XCURSOR_THEME = "Adwaita";
+      XCURSOR_SIZE = "32";
     };
     etc = {
       "Xmodmap".text = ''

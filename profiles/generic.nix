@@ -21,6 +21,12 @@
     '';
   };
 
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryFlavor = "qt";
+    enableSSHSupport = true;
+  };
+
   services = {
     avahi.enable = true;
     openssh.enable = true;

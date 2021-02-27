@@ -5,10 +5,10 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "ba57d5a29b4e0f2085917010380ef3ddc3cf380f",
-        "sha256": "1kpsvc53x821cmjg1khvp1nz7906gczq8mp83664cr15h94sh8i4",
+        "rev": "af958e8057f345ee1aca714c1247ef3ba1c15f5e",
+        "sha256": "1qjavxabbrsh73yck5dcq8jggvh3r2jkbr6b5nlz5d9yrqm9255n",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/ba57d5a29b4e0f2085917010380ef3ddc3cf380f.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/af958e8057f345ee1aca714c1247ef3ba1c15f5e.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nix-direnv": {
@@ -17,10 +17,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "nix-direnv",
-        "rev": "9b3e62f10f0b1886ada0346fc922768384ec99fc",
-        "sha256": "0k5idc9kv1j9lplzrrc4i7kshifm31dnmxhcxm2jy32j2w8cr1mm",
+        "rev": "afe42485d07199fc46b24d8a175324616846aada",
+        "sha256": "1pzfw4zzgilxby779w1qal1nw915yjhngi8gyshmbdaawchb4hvb",
         "type": "tarball",
-        "url": "https://github.com/nix-community/nix-direnv/archive/9b3e62f10f0b1886ada0346fc922768384ec99fc.tar.gz",
+        "url": "https://github.com/nix-community/nix-direnv/archive/afe42485d07199fc46b24d8a175324616846aada.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "4a75ca4a4e7d14e7b0b0230b3ea57b5bd7c16218",
-        "sha256": "1jqhmwyslwcj6l4lmdiklb1byaz0gcl4q0mym3ahzmmr6l0j4dr1",
+        "rev": "d4189f68fdbe0b14b7637447cb0efde2711f4abf",
+        "sha256": "1k9x7z4a8xsmcywwpm7jbgnzrrg0b97ygwjk2adc4jhk9c0ljdny",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/4a75ca4a4e7d14e7b0b0230b3ea57b5bd7c16218.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/d4189f68fdbe0b14b7637447cb0efde2711f4abf.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "pre-commit-hooks.nix": {

@@ -11,6 +11,8 @@ in
     ../../profiles/terminal.nix
     ../../profiles/pulseaudio.nix
     ../../profiles/nix-direnv.nix
+    ../../profiles/elements-usb-disk.nix
+    ../../profiles/assetupnp.nix
   ];
 
 
@@ -31,13 +33,17 @@ in
     overlays = [
       (import ../../overlays/neovim.nix)
       (import ../../overlays/i3.nix)
+      (import ../../overlays/assetupnp.nix)
     ];
   };
 
   networking = {
     hostName = "toontown";
     networkmanager.enable = true;
-    firewall.enable = true;
+    firewall = {
+      enable = false;
+      #allowedUDPPorts = [ 1900 5353 ];
+    };
   };
 
   hardware = {

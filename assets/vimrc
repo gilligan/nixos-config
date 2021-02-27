@@ -94,6 +94,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'monkoose/fzf-hoogle.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'troydm/zoomwintab.vim'
 
 "
 " misc

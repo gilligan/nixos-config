@@ -52,20 +52,12 @@ in
 
   services = {
 
-    fail2ban = {
-      enable = true;
-    };
-
     hydra = {
-      enable = true;
+      enable = false;
       hydraURL = "toontown";
       notificationSender = "hydra@toontown";
     };
 
-    zerotierone = {
-      enable = true;
-      joinNetworks = [ "83048a063215e300" ];
-    };
   };
 
   sound.extraConfig = ''

@@ -6,7 +6,7 @@
 , xbacklight
 , xcape
 , xset
-, alacritty
+, konsole
 , i3-wallpaper
 , shutter
 , qt5
@@ -77,7 +77,7 @@ in
   floating_modifier $mod
 
   # start a terminal
-  bindsym $mod+Return exec ${alacritty}/bin/alacritty
+  bindsym $mod+Return exec ${konsole}/bin/konsole
 
   # kill focused window
   bindsym $mod+Shift+q kill

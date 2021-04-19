@@ -109,6 +109,11 @@ Plug 'iamcco/markdown-preview.nvim'
 Plug 'sbdchd/neoformat'
 
 "
+" SNES Hacking
+"
+Plug 'maxbane/vim-asm_ca65'
+
+"
 " Rust
 "
 Plug 'rust-lang/rust.vim'

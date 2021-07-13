@@ -5,7 +5,6 @@
 
   boot = {
     loader.systemd-boot.enable = true;
-    initrd.kernelModules = [ "fbcon" ];
     cleanTmpDir = true;
   };
 

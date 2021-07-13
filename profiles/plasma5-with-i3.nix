@@ -74,6 +74,7 @@
       fira-mono
       powerline-fonts
       font-awesome-ttf
+      nerdfonts
     ];
   };
 

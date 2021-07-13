@@ -1,4 +1,10 @@
 self: super:
+let
+  sources = import ../nix/sources.nix;
+  nixpkgs-unstable = import sources.nixpkgs-unstable {
+    config = { allowUnfree = true; };
+  };
+in
 {
   plug-vim = self.writeTextFile {
     name = "plug.vim";
@@ -6,7 +12,7 @@ self: super:
     destination = "/plug.vim";
   };
 
-  neovim = super.neovim.override {
+  neovim = nixpkgs-unstable.neovim.override {
     withNodeJs = true;
     configure = {
       customRC = ''

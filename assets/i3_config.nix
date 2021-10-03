@@ -140,7 +140,7 @@ in
   bindsym $mod+e layout toggle split
 
   # toggle tiling / floating
-  #bindsym $mod+Shift+space floating toggle
+  bindsym $mod+Shift+f floating toggle
 
   # change focus between tiling / floating windows
   #bindsym $mod+space focus mode_toggle

@@ -2,3 +2,5 @@
 result*
 host-config.nix
 host-hardware.nix
+.pre-commit-config.yaml
+pkgs/assetupnp/AssetUPnP-Linux-x64-premium.tar.gz

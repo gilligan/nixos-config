@@ -28,7 +28,6 @@
       my-neovim
       ripgrep
       shellcheck
-      sorri
       wget
     ];
   };

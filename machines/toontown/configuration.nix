@@ -29,6 +29,7 @@ in
     pkgs = nixpkgs;
     config = {
       allowUnfree = true;
+      allowAliases = true;
     };
     overlays = [
       (import ../../overlays/neovim.nix)

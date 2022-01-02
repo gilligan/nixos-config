@@ -12,7 +12,7 @@
       };
 
       displayManager = {
-        defaultSession = "plasma5+i3";
+        defaultSession = "plasma";
         sessionCommands = ''
           gpg-connect-agent /bye
           GPG_TTY=$(tty)
@@ -37,6 +37,7 @@
   environment = {
     systemPackages = with pkgs; [
       chromium
+      google-chrome
       slack
       signal-desktop
       spotify
@@ -63,7 +64,7 @@
   };
 
   fonts = {
-    enableFontDir = true;
+    fontDir.enable = true;
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
       corefonts

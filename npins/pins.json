@@ -5,8 +5,8 @@
       "repository": "neovim-nix",
       "owner": "gilligan",
       "branch": "main",
-      "revision": "ce4c7dae262ff5af48c67040053c004d23403549",
-      "hash": "0rqa3q323az0jyzcbbz50v0885zznhm5shs9ip517bz3rqlbqnhz"
+      "revision": "05c61848890cc2bdbd60fe8cfd483f380abb7bec",
+      "hash": "1lyilxvsvkj39wkkrl6lhy6ry07wfcgs6rds2krjc1zbnqazdv8d"
     },
     "nix-direnv": {
       "type": "GitHub",

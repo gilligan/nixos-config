@@ -25,7 +25,7 @@
       gitAndTools.hub
       gitAndTools.tig
       jq
-      neovim
+      my-neovim
       ripgrep
       shellcheck
       sorri

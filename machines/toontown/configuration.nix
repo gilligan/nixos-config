@@ -32,7 +32,6 @@ in
       allowAliases = true;
     };
     overlays = [
-      (import ../../overlays/neovim.nix)
       (import ../../overlays/i3.nix)
       (import ../../overlays/assetupnp.nix)
     ];

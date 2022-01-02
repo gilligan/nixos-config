@@ -26,7 +26,6 @@ in
       allowUnfree = true;
     };
     overlays = [
-      (import ../../overlays/neovim.nix)
       (import ../../overlays/i3.nix)
     ];
   };

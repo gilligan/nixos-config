@@ -1,8 +1,9 @@
 { pkgs ? import ./nix }:
 let
   nixos = pkgs.nixos;
+  buildSys = p: (nixos p).config.system.build.toplevel;
 in
 {
-  toontown = (nixos ./machines/toontown/configuration.nix);
-  semigroup = (nixos ./machines/semigroup/configuration.nix);
+  toontown = (buildSys ./machines/toontown/configuration.nix);
+  semigroup = (buildSys ./machines/semigroup/configuration.nix);
 }

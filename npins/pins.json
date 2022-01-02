@@ -1,0 +1,60 @@
+{
+  "pins": {
+    "neovim-nix": {
+      "type": "GitHub",
+      "repository": "neovim-nix",
+      "owner": "gilligan",
+      "branch": "main",
+      "revision": "ce4c7dae262ff5af48c67040053c004d23403549",
+      "hash": "0rqa3q323az0jyzcbbz50v0885zznhm5shs9ip517bz3rqlbqnhz"
+    },
+    "nix-direnv": {
+      "type": "GitHub",
+      "repository": "nix-direnv",
+      "owner": "nix-community",
+      "branch": "master",
+      "revision": "b6af475b0524d77fcee9e4a7489ff965dc33fba7",
+      "hash": "073r5ffqas1ah2y3355g77f1ybdm1a7s3yyx6ip79751rv81dpkz"
+    },
+    "nixpkgs": {
+      "type": "GitHub",
+      "repository": "nixpkgs",
+      "owner": "NixOS",
+      "branch": "21.11",
+      "revision": "a7ecde854aee5c4c7cd6177f54a99d2c1ff28a31",
+      "hash": "162dywda2dvfj1248afxc45kcrg83appjd0nmdb541hl7rnncf02"
+    },
+    "nixpkgs-unstable": {
+      "type": "GitHub",
+      "repository": "nixpkgs",
+      "owner": "NixOS",
+      "branch": "nixpkgs-unstable",
+      "revision": "0fd74961da9fe2640ad2fbd960c3af08246e6749",
+      "hash": "18zjg115crlk2yz5ghmswgnnjdcz87frqk1p0g7ygh1q0flp87z3"
+    },
+    "npins": {
+      "type": "GitHub",
+      "repository": "npins",
+      "owner": "andir",
+      "branch": "master",
+      "revision": "fd22eef6738232477fba10046e2b00406656b09d",
+      "hash": "04h1k1d8qq6ddb8xx3xfz4zk329myfygqva7m56mc00ygnj0cgrp"
+    },
+    "pre-commit-hooks.nix": {
+      "type": "GitHub",
+      "repository": "pre-commit-hooks.nix",
+      "owner": "cachix",
+      "branch": "master",
+      "revision": "ff9c0b459ddc4b79c06e19d44251daa8e9cd1746",
+      "hash": "0z09ndxvbk6w4j28lzgj0b9qqcbwrvr58c0xsm0rf0xsdipi0nwf"
+    },
+    "sorri": {
+      "type": "GitHub",
+      "repository": "sorri",
+      "owner": "nmattia",
+      "branch": "master",
+      "revision": "a13196b986cdcccd0adeb72c04f03c222116dd27",
+      "hash": "1xw07ikaprcgz6dnlnf1jvc6paz2yj6f0m1nfdwnf0naziax9n3n"
+    }
+  }
+}

@@ -17,10 +17,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "nix-direnv",
-        "rev": "69bec056fb036ff526184a995f07ee7b3f0abf0b",
-        "sha256": "05a3mnjs9k808v2f93hn4i1kw14xwfp5xvi1znhzdmckijzy3xzp",
+        "rev": "b6af475b0524d77fcee9e4a7489ff965dc33fba7",
+        "sha256": "073r5ffqas1ah2y3355g77f1ybdm1a7s3yyx6ip79751rv81dpkz",
         "type": "tarball",
-        "url": "https://github.com/nix-community/nix-direnv/archive/69bec056fb036ff526184a995f07ee7b3f0abf0b.tar.gz",
+        "url": "https://github.com/nix-community/nix-direnv/archive/b6af475b0524d77fcee9e4a7489ff965dc33fba7.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
@@ -41,10 +41,10 @@
         "homepage": "",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "391f93a83c3a486475d60eb4a569bb6afbf306ad",
-        "sha256": "0s5f7j2akh3g0013880jfbigdaac1z76r9dv46yw6k254ba2r6nq",
+        "rev": "0fd74961da9fe2640ad2fbd960c3af08246e6749",
+        "sha256": "18zjg115crlk2yz5ghmswgnnjdcz87frqk1p0g7ygh1q0flp87z3",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/391f93a83c3a486475d60eb4a569bb6afbf306ad.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/0fd74961da9fe2640ad2fbd960c3af08246e6749.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "pre-commit-hooks.nix": {
@@ -53,10 +53,10 @@
         "homepage": "",
         "owner": "cachix",
         "repo": "pre-commit-hooks.nix",
-        "rev": "c3b4f94350b0e59c2546fa85890cc70d03616b9c",
-        "sha256": "1x90b2m8kzxzslfssvnaq9s1m0n9rxqw41qhz298gnv4nvahcr0f",
+        "rev": "ff9c0b459ddc4b79c06e19d44251daa8e9cd1746",
+        "sha256": "0z09ndxvbk6w4j28lzgj0b9qqcbwrvr58c0xsm0rf0xsdipi0nwf",
         "type": "tarball",
-        "url": "https://github.com/cachix/pre-commit-hooks.nix/archive/c3b4f94350b0e59c2546fa85890cc70d03616b9c.tar.gz",
+        "url": "https://github.com/cachix/pre-commit-hooks.nix/archive/ff9c0b459ddc4b79c06e19d44251daa8e9cd1746.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "sorri": {

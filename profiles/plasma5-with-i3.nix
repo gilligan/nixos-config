@@ -1,5 +1,12 @@
 { config, lib, pkgs, ... }:
 
+let
+  i3-wrapper = pkgs.writeScriptBin "i3"
+    ''
+      exec ${pkgs.i3-gaps}/bin/i3 -c ${pkgs.i3-config-file}
+    '';
+in
+
 {
 
   services = {
@@ -12,14 +19,16 @@
       };
 
       displayManager = {
-        defaultSession = "plasma";
-        sessionCommands = ''
-          gpg-connect-agent /bye
-          GPG_TTY=$(tty)
-          export GPG_TTY
-          export XCURSOR_PATH=${pkgs.gnome3.adwaita-icon-theme}/share/icons
-          ${pkgs.xlibs.xsetroot}/bin/xsetroot -cursor_name ${pkgs.gnome3.adwaita-icon-theme}/share/icons/Adwaita/cursors/left_ptr 64
-        '';
+        defaultSession = "plasma+i3";
+        session = [
+          {
+            manage = "desktop";
+            name = "plasma+i3";
+            start = ''
+              exec env KDEWM=${i3-wrapper}/bin/i3 ${pkgs.plasma-workspace}/bin/startplasma-x11
+            '';
+          }
+        ];
       };
 
       windowManager.i3 = {
@@ -47,7 +56,7 @@
     variables = {
       KDEWM = "/run/current-system/sw/bin/i3";
       XCURSOR_THEME = "Adwaita";
-      XCURSOR_SIZE = "32";
+      XCURSOR_SIZE = "64";
     };
     etc = {
       "Xmodmap".text = ''

@@ -20,14 +20,18 @@
       ag
       direnv
       entr
+      file
       fzf
       gitAndTools.gitFull
       gitAndTools.hub
       gitAndTools.tig
       jq
+      killall
       my-neovim
+      nix-index
       ripgrep
       shellcheck
+      tmate
       wget
     ];
   };
@@ -54,7 +58,7 @@
         vim = "nvim";
       };
       interactiveShellInit = ''
-        export BROWSER=chromium
+        export BROWSER=google-chrome-stable
         export TERM=xterm-256color
         export NIXPKGS_ALLOW_UNFREE=1
         export FZF_DEFAULT_COMMAND='ag -g ""'

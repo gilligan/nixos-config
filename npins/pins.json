@@ -5,8 +5,8 @@
       "repository": "neovim-nix",
       "owner": "gilligan",
       "branch": "main",
-      "revision": "05c61848890cc2bdbd60fe8cfd483f380abb7bec",
-      "hash": "1lyilxvsvkj39wkkrl6lhy6ry07wfcgs6rds2krjc1zbnqazdv8d"
+      "revision": "a69d40905bb8c22308e3f4fff25b7633268126c7",
+      "hash": "1y9595cvyvfq0bgqz3i0rn26c7phhdjgb3741akfdspgb72d078z"
     },
     "nix-direnv": {
       "type": "GitHub",
@@ -23,14 +23,6 @@
       "branch": "21.11",
       "revision": "a7ecde854aee5c4c7cd6177f54a99d2c1ff28a31",
       "hash": "162dywda2dvfj1248afxc45kcrg83appjd0nmdb541hl7rnncf02"
-    },
-    "nixpkgs-unstable": {
-      "type": "GitHub",
-      "repository": "nixpkgs",
-      "owner": "NixOS",
-      "branch": "nixpkgs-unstable",
-      "revision": "28d58b979250ef33f049fe1c74daa50b7515126b",
-      "hash": "04i3c7fvdb4v4q030vd3vdg3y3bw8wn3a184hp0jyycss8jc8a4q"
     },
     "npins": {
       "type": "GitHub",

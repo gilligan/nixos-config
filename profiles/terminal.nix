@@ -55,6 +55,7 @@
       shellAliases = {
         pbcopy = "${pkgs.xclip}/bin/xclip -selection clipboard";
         pbpaste = "${pkgs.xclip}/bin/xclip -selection clipboard -o";
+        docker-clean = "docker rm --force $(docker ps -a -q) && docker rmi --force $(docker images -q)";
         vim = "nvim";
       };
       interactiveShellInit = ''

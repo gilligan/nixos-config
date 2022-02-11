@@ -40,13 +40,6 @@ in
     opengl.enable = true;
   };
 
-  services = {
-    zerotierone = {
-      enable = true;
-      joinNetworks = [ "83048a063215e300" ];
-    };
-  };
-
   virtualisation = {
     virtualbox.host.enable = false;
     docker.enable = true;

@@ -27,7 +27,7 @@
       gitAndTools.tig
       jq
       killall
-      my-neovim
+      nvim
       nix-index
       ripgrep
       shellcheck

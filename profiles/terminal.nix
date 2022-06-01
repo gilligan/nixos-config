@@ -27,6 +27,7 @@
       gitAndTools.tig
       jq
       killall
+      npins
       nvim
       nix-index
       ripgrep

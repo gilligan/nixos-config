@@ -20,9 +20,9 @@
         "repo": "nix-direnv"
       },
       "branch": "master",
-      "revision": "fd988e0a6c1c963f45db30868a093f1a2f35ae8b",
-      "url": "https://github.com/nix-community/nix-direnv/archive/fd988e0a6c1c963f45db30868a093f1a2f35ae8b.tar.gz",
-      "hash": "0zxav6p60s9vzly1yjq79nabvmg4a4n9fi9jx0pd9ck9vip8v9a4"
+      "revision": "b52b067fa6767afa6b44b56ff6877b91b76b0f38",
+      "url": "https://github.com/nix-community/nix-direnv/archive/b52b067fa6767afa6b44b56ff6877b91b76b0f38.tar.gz",
+      "hash": "028pzjqw67mbary9vajigm908v3y7jiq71a9ynchivn1ahklnvkb"
     },
     "nixpkgs": {
       "type": "Git",
@@ -32,9 +32,9 @@
         "repo": "nixpkgs"
       },
       "branch": "release-21.11",
-      "revision": "b5991e4971523a5fcc9413b9003b58e5c15aa7d8",
-      "url": "https://github.com/nixos/nixpkgs/archive/b5991e4971523a5fcc9413b9003b58e5c15aa7d8.tar.gz",
-      "hash": "1zqnpiqqwfn0jqqhmz0km0xyfq5rdw9drrxpd9q2rah65di09s76"
+      "revision": "1c813bbdc330b45fe922c642eb610902aecd5673",
+      "url": "https://github.com/nixos/nixpkgs/archive/1c813bbdc330b45fe922c642eb610902aecd5673.tar.gz",
+      "hash": "1ldbak39rk3mb11dndp0fpdivym0rv4dashqhfbsjdz2mvvjyxv7"
     },
     "npins": {
       "type": "Git",

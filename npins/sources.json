@@ -20,21 +20,21 @@
         "repo": "nix-direnv"
       },
       "branch": "master",
-      "revision": "b52b067fa6767afa6b44b56ff6877b91b76b0f38",
-      "url": "https://github.com/nix-community/nix-direnv/archive/b52b067fa6767afa6b44b56ff6877b91b76b0f38.tar.gz",
-      "hash": "028pzjqw67mbary9vajigm908v3y7jiq71a9ynchivn1ahklnvkb"
+      "revision": "bd76e52a97f148f1251a34e5a74153cf10a74dda",
+      "url": "https://github.com/nix-community/nix-direnv/archive/bd76e52a97f148f1251a34e5a74153cf10a74dda.tar.gz",
+      "hash": "1s3nwd3w4gvrabp9425g2p7a00l8nj9j9652pbr5pdlzixx1ma4z"
     },
     "nixpkgs": {
       "type": "Git",
       "repository": {
         "type": "GitHub",
-        "owner": "nixos",
+        "owner": "NixOS",
         "repo": "nixpkgs"
       },
-      "branch": "release-21.11",
-      "revision": "1c813bbdc330b45fe922c642eb610902aecd5673",
-      "url": "https://github.com/nixos/nixpkgs/archive/1c813bbdc330b45fe922c642eb610902aecd5673.tar.gz",
-      "hash": "1ldbak39rk3mb11dndp0fpdivym0rv4dashqhfbsjdz2mvvjyxv7"
+      "branch": "release-22.05",
+      "revision": "5d52b4e4fba11066959751366e410b97dcadc055",
+      "url": "https://github.com/NixOS/nixpkgs/archive/5d52b4e4fba11066959751366e410b97dcadc055.tar.gz",
+      "hash": "1imggy06blrjm0paf3nnakg21a9x9c87cqyiix3lynj39a9c5m8c"
     },
     "npins": {
       "type": "Git",
@@ -44,9 +44,9 @@
         "repo": "npins"
       },
       "branch": "master",
-      "revision": "ea72e4f1346e7dbdaf33b8a5c35a57faa097a214",
-      "url": "https://github.com/andir/npins/archive/ea72e4f1346e7dbdaf33b8a5c35a57faa097a214.tar.gz",
-      "hash": "1vkyfbhl665fcsjckcgxv1nicsj0rxpf86wa7b0bas31sv5468vw"
+      "revision": "e6344c501ef00913e9c8bac4dc960d85711e881c",
+      "url": "https://github.com/andir/npins/archive/e6344c501ef00913e9c8bac4dc960d85711e881c.tar.gz",
+      "hash": "1h3454ayl7y6y8wmj9ngjimmrx9wvwl64318jpqazlmgf4dbpjk7"
     },
     "pre-commit-hooks.nix": {
       "type": "Git",
@@ -56,9 +56,9 @@
         "repo": "pre-commit-hooks.nix"
       },
       "branch": "master",
-      "revision": "521a524771a8e93caddaa0ac1d67d03766a8b0b3",
-      "url": "https://github.com/cachix/pre-commit-hooks.nix/archive/521a524771a8e93caddaa0ac1d67d03766a8b0b3.tar.gz",
-      "hash": "16qfrylk41r7gc7g4352hxz7b3vk9w7bc6893apmmr6yy08ra0m9"
+      "revision": "8cb8ea5f1c7bc2984f460587fddd5f2e558f6eb8",
+      "url": "https://github.com/cachix/pre-commit-hooks.nix/archive/8cb8ea5f1c7bc2984f460587fddd5f2e558f6eb8.tar.gz",
+      "hash": "0ll3dbqbsj6cawvjj66c1h8635qwbrhp8i34lzhbc2rnmzfp2j0x"
     },
     "rnix-lsp": {
       "type": "Git",
@@ -68,9 +68,9 @@
         "repo": "rnix-lsp"
       },
       "branch": "master",
-      "revision": "9736265eb4fd4d1488b34b229ad1ab589610740e",
-      "url": "https://github.com/nix-community/rnix-lsp/archive/9736265eb4fd4d1488b34b229ad1ab589610740e.tar.gz",
-      "hash": "0jlaqbr370fw2g9kkaq2zqz2dqhwdmx2abmxls4b4zxppaf63kw9"
+      "revision": "ff18e04551a39ccdab0ff9c83926db3807b23478",
+      "url": "https://github.com/nix-community/rnix-lsp/archive/ff18e04551a39ccdab0ff9c83926db3807b23478.tar.gz",
+      "hash": "1myf1vf3vhm21yijqg7s945mi8vs1gql0l98rgmhngfx680jkqp0"
     }
   },
   "version": 2

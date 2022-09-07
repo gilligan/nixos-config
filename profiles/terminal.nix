@@ -17,7 +17,7 @@
       FZF_DEFAULT_COMMAND = "ag -g \"\"";
     };
     systemPackages = with pkgs; [
-      ag
+      silver-searcher
       direnv
       entr
       file

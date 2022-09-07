@@ -83,7 +83,7 @@ in
       fira-code-symbols
       fira-mono
       powerline-fonts
-      font-awesome-ttf
+      font-awesome
       nerdfonts
     ];
   };

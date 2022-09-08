@@ -45,7 +45,7 @@ in
 
   environment = {
     systemPackages = with pkgs; [
-      chromium
+      #chromium
       google-chrome
       slack
       signal-desktop

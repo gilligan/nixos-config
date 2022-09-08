@@ -20,9 +20,9 @@
         "repo": "nix-direnv"
       },
       "branch": "master",
-      "revision": "bd76e52a97f148f1251a34e5a74153cf10a74dda",
-      "url": "https://github.com/nix-community/nix-direnv/archive/bd76e52a97f148f1251a34e5a74153cf10a74dda.tar.gz",
-      "hash": "1s3nwd3w4gvrabp9425g2p7a00l8nj9j9652pbr5pdlzixx1ma4z"
+      "revision": "61230849fa53664606f5e3a68e9ff33df6c36c47",
+      "url": "https://github.com/nix-community/nix-direnv/archive/61230849fa53664606f5e3a68e9ff33df6c36c47.tar.gz",
+      "hash": "035iz7wqli5qi75znclqkhqd7is8j6fcixr03v303zw3ka3a6g2j"
     },
     "nixpkgs": {
       "type": "Git",
@@ -32,9 +32,9 @@
         "repo": "nixpkgs"
       },
       "branch": "release-22.05",
-      "revision": "5d52b4e4fba11066959751366e410b97dcadc055",
-      "url": "https://github.com/NixOS/nixpkgs/archive/5d52b4e4fba11066959751366e410b97dcadc055.tar.gz",
-      "hash": "1imggy06blrjm0paf3nnakg21a9x9c87cqyiix3lynj39a9c5m8c"
+      "revision": "8d5f0960e77a0293513e18fea766a9e0febecb3c",
+      "url": "https://github.com/NixOS/nixpkgs/archive/8d5f0960e77a0293513e18fea766a9e0febecb3c.tar.gz",
+      "hash": "0kfjdgjz1c27v1i3mx89bwzf7g3x2bvy8ab604gj1b3rfaxbiyrm"
     },
     "npins": {
       "type": "Git",

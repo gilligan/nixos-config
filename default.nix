@@ -5,5 +5,4 @@ let
 in
 {
   toontown = (buildSys ./machines/toontown/configuration.nix);
-  semigroup = (buildSys ./machines/semigroup/configuration.nix);
 }

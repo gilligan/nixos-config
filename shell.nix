@@ -12,6 +12,5 @@ let
 in
 pkgs.mkShell {
   buildInputs = with pkgs; [ git nixpkgs-fmt npins gnumake rnix-lsp ];
-  NIX_PATH = "nixpkgs=${pkgs.path}";
   inherit (pre-commit-hooks) shellHook;
 }

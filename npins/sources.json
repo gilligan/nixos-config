@@ -32,9 +32,9 @@
         "repo": "nixpkgs"
       },
       "branch": "release-22.05",
-      "revision": "8d5f0960e77a0293513e18fea766a9e0febecb3c",
-      "url": "https://github.com/NixOS/nixpkgs/archive/8d5f0960e77a0293513e18fea766a9e0febecb3c.tar.gz",
-      "hash": "0kfjdgjz1c27v1i3mx89bwzf7g3x2bvy8ab604gj1b3rfaxbiyrm"
+      "revision": "c7bad05cd7be62d8e59131b351e1e99e6215e886",
+      "url": "https://github.com/NixOS/nixpkgs/archive/c7bad05cd7be62d8e59131b351e1e99e6215e886.tar.gz",
+      "hash": "1a97p3m5m85px01vscmacnhyysq35xpj502gvlxw8v77d821s3fb"
     },
     "npins": {
       "type": "Git",

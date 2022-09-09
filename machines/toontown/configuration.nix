@@ -1,6 +1,9 @@
 { config, lib, pkgs, ... }:
 let
   nixpkgs = import ../../nix;
+  configDir = toString ./.;
+  sources = import ../../npins;
+  _nixpkgs = sources.nixpkgs;
 in
 {
   imports = [
@@ -15,15 +18,39 @@ in
     ../../profiles/assetupnp.nix
   ];
 
+  system.nixos.versionSuffix = _nixpkgs.revision;
+  system.nixos.version = _nixpkgs.branch;
+
+  environment.etc."nixos-configuration".source = pkgs.nix-gitignore.gitignoreSource [ ] ./.;
+  environment.etc."nixos-sources".source = pkgs.symlinkJoin {
+    name = "sources";
+    paths = lib.attrValues (
+      lib.mapAttrs
+        (name: path:
+          pkgs.runCommandNoCC "${name}-src" { inherit name path; } "mkdir $out; ln -s $path $out/$name"
+        )
+        (lib.filterAttrs (_: v: !lib.isFunction v) sources)
+    );
+  };
+  environment.systemPackages = [
+    (pkgs.writeShellScriptBin "rebuild" ''
+      PATH="${config.nix.package}/bin:$PATH"
+      set -exu
+      set -o pipefail
+      REBUILD=$(nix-build --no-out-link ${configDir} -A rebuild)
+      exec "$REBUILD" "$@"
+    '')
+  ];
 
   nix = {
     buildCores = 16;
     trustedUsers = [ "root" "gilligan" ];
-    nixPath = [ "nixpkgs=${nixpkgs.path}" ];
+    nixPath = lib.mkForce [ "nixpkgs=${_nixpkgs}" ];
     extraOptions = ''
       allowed-uris = https://github.com
     '';
   };
+
 
   nixpkgs = {
     pkgs = nixpkgs;
@@ -54,15 +81,10 @@ in
 
   services = {
 
+    # Nintendo Gamecube Controller
     udev.extraRules = ''
       SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="057e", ATTRS{idProduct}=="0337", MODE="0666"
     '';
-
-    hydra = {
-      enable = false;
-      hydraURL = "toontown";
-      notificationSender = "hydra@toontown";
-    };
 
   };
 
@@ -78,7 +100,6 @@ in
   '';
 
   virtualisation = {
-    virtualbox.host.enable = false;
     docker.enable = true;
     libvirtd.enable = true;
   };

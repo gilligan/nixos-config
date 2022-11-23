@@ -14,8 +14,8 @@ in
     ../../profiles/terminal.nix
     ../../profiles/pulseaudio.nix
     ../../profiles/nix-direnv.nix
-    ../../profiles/elements-usb-disk.nix
-    ../../profiles/assetupnp.nix
+    #../../profiles/elements-usb-disk.nix
+    #../../profiles/assetupnp.nix
   ];
 
   system.nixos.versionSuffix = _nixpkgs.revision;

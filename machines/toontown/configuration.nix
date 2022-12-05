@@ -60,7 +60,7 @@ in
     };
     overlays = [
       (import ../../overlays/i3.nix)
-      (import ../../overlays/assetupnp.nix)
+      #(import ../../overlays/assetupnp.nix)
     ];
   };
 

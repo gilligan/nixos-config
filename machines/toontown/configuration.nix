@@ -43,8 +43,10 @@ in
   ];
 
   nix = {
-    buildCores = 16;
-    trustedUsers = [ "root" "gilligan" ];
+    settings = {
+      trusted-users = [ "root" "gilligan" ];
+      cores = 16;
+    };
     nixPath = lib.mkForce [ "nixpkgs=${_nixpkgs}" ];
     extraOptions = ''
       allowed-uris = https://github.com

@@ -5,6 +5,10 @@ let
     ''
       exec ${pkgs.i3-gaps}/bin/i3 -c ${pkgs.i3-config-file}
     '';
+
+  scaled-chrome = pkgs.writeScriptBin "scaled-chrome" ''
+    exec ${pkgs.google-chrome}/bin/google-chrome-stable --force-device-scale-factor=1.5
+  '';
 in
 
 {
@@ -47,6 +51,7 @@ in
     systemPackages = with pkgs; [
       #chromium
       google-chrome
+      scaled-chrome
       slack
       signal-desktop
       spotify

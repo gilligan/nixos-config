@@ -80,6 +80,7 @@ in
   };
 
   programs.steam.enable = true;
+  programs.mosh.enable = true;
 
   services = {
 

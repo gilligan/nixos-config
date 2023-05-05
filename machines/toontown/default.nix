@@ -1,16 +1,21 @@
 { pkgs ? import ../../nix }:
 let
   nixos = pkgs.nixos;
-  buildSys = p: (nixos p).config.system.build.toplevel;
+  buildSys = p: (nixos p);
+  sys = (buildSys ./configuration.nix);
   configDir = toString ./.;
 in
-{
-  system = buildSys ./configuration.nix;
+rec {
+  system = sys.config.system.build.toplevel;
   rebuild = pkgs.writeShellScript "rebuild" ''
-    PATH="${pkgs.nix}/bin:$PATH"
+    PATH="${sys.config.nix.package}/bin:$PATH"
     set -exu
     set -o pipefail
-    ACTIVATION_SCRIPT=$(nix-build --no-out-link ${configDir} -A system)/bin/switch-to-configuration
+    PROFILE=$(nix-build --no-out-link ${configDir} -A system)
+    ACTIVATION_SCRIPT=$PROFILE/bin/switch-to-configuration
+    if [[ "$1" = switch || "$1" = boot ]]; then
+      nix-env -p "/nix/var/nix/profiles/system" --set $PROFILE
+    fi
     exec $ACTIVATION_SCRIPT "$@"
   '';
 }

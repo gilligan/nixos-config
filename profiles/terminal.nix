@@ -28,7 +28,7 @@
       jq
       killall
       npins
-      nvim
+      neovim-nix
       nix-index
       ripgrep
       shellcheck

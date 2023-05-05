@@ -254,6 +254,49 @@ in
   for_window [class="(?i)*nextcloud*"] floating disable
   for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px, no_focus
 
+  #
+  # Solarized Light
+  #
+  set $base00 #fdf6e3
+  set $base01 #eee8d5
+  set $base02 #93a1a1
+  set $base03 #839496
+  set $base04 #657b83
+  set $base05 #586e75
+  set $base06 #073642
+  set $base07 #002b36
+  set $base08 #dc322f
+  set $base09 #cb4b16
+  set $base0A #b58900
+  set $base0B #859900
+  set $base0C #2aa198
+  set $base0D #268bd2
+  set $base0E #6c71c4
+  set $base0F #d33682
+
+  #
+  # bar config
+  #
+  bar {
+      status_command i3status
+  
+      colors {
+          background $base00
+          separator  $base01
+          statusline $base04
+  
+          # State             Border  BG      Text
+          focused_workspace   $base05 $base0D $base00
+          active_workspace    $base05 $base03 $base00
+          inactive_workspace  $base03 $base01 $base05
+          urgent_workspace    $base08 $base08 $base00
+          binding_mode        $base00 $base0A $base00
+      }
+  }
+
+  #
+  # Startup Applications
+  #
   exec --no-startup-id ${xcape}/bin/xcape -e 'Control_L=Escape;Shift_R=parenright;Shift_L=parenleft'
   exec --no-startup-id ${feh}/bin/feh --bg-scale ${i3-wallpaper}
   exec --no-startup-id ${xset}/bin/xset r rate 200 50

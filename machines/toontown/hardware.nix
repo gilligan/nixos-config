@@ -46,6 +46,4 @@
     [{ device = "/dev/disk/by-uuid/3b57f9a5-796f-4655-a36e-c33c8b4193c7"; }];
 
   nix.settings.max-jobs = lib.mkDefault 32;
-  # High-DPI console
-  console.font = lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
 }
